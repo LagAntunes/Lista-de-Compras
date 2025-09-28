@@ -1,0 +1,63 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  width: 100%;
+  height: auto;
+
+  & .control {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    width: 100%;
+    height: auto;
+
+    & input {
+      width: 451px;
+      height: 44px;
+      padding: 11px 18px;
+      background-color: var(--background-secondary);
+      border: 2px solid var(--border-primary);
+      border-radius: 12px;
+
+      &::placeholder {
+        font-size: 16px;
+        line-height: 20px;
+        font-weight: 400;
+        color: var(--content-tertiary);
+      }
+    }
+
+    & button {
+      width: 160px;
+      height: 44px;
+      background-color: var(--color-brand);
+      border-radius: 12px;
+      border: none;
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+
+      &:hover {
+        background-color: var(--color-brand-hover);
+      }
+
+      &.disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+
+        &:hover {
+          background-color: var(--color-brand);
+        }
+      }
+    }
+
+    @media screen and (max-width: 767px) {
+      flex-direction: column;
+
+      & input,
+      & button {
+        width: 100%;
+      }
+    }
+  }
+}

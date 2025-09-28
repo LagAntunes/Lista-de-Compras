@@ -1,0 +1,8 @@
+/* Global */
+@import "./global.css";
+/* Tipografia */
+@import "./typography.css";
+/* Variáveis */
+@import "./variables.css";
+/* Componentes */
+@import "./components/styles.css";

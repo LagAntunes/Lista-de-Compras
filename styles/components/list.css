@@ -1,0 +1,85 @@
+.list {
+  display: none;
+  width: 100%;
+  height: auto;
+
+  &.active {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  & li {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+    min-height: 49px;
+    padding: 8px 56px 8px 12px;
+    border-radius: 12px;
+    background-color: var(--background-secondary);
+    position: relative;
+
+    & .checkbox {
+      width: 16px;
+      height: 16px;
+      background-image: url(../../assets/icons/checkbox.png);
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      position: relative;
+      cursor: pointer;
+
+      & input {
+        all: unset;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        inset: 0;
+        opacity: 0;
+      }
+
+      &:has(input:checked) {
+        background-image: url(../../assets/icons/checkbox-selected.png);
+      }
+    }
+
+    & p {
+      max-width: 95%;
+    }
+
+    & button {
+      width: 16px;
+      height: 16px;
+      border: none;
+      background-image: url(../../assets/icons/trashcan.png);
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-color: transparent;
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      right: 20px;
+      transform: translateY(-50%);
+    }
+  }
+
+  & .message {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+    min-height: 49px;
+    padding: 12px;
+    border-radius: 12px;
+    background-color: var(--color-danger);
+    position: relative;
+
+    &::before {
+      content: url("../../assets/icons/alert.png");
+    }
+  }
+}

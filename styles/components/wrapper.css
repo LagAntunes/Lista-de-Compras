@@ -1,0 +1,20 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 44px;
+  max-width: 627px;
+  width: 100%;
+  height: auto;
+  margin: 0 0 36px;
+
+  @media screen and (max-width: 767px) {
+    max-width: 100%;
+    padding: 0 20px;
+  }
+
+  & .text {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+}

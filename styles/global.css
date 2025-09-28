@@ -1,0 +1,38 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  overflow-x: hidden;
+  font-family: "Inter", sans-serif;
+  background-color: var(--background-primary);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 62px;
+  width: 100%;
+  height: auto;
+  padding: 25px 0;
+}
+
+a {
+  text-decoration: none;
+  width: fit-content;
+}
+
+ul {
+  list-style: none;
+}
+
+input,
+a {
+  outline: none;
+}
